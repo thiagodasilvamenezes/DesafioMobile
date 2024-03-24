@@ -35,19 +35,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-/*        binding.btnAbrir.setOnClickListener {
+        binding.btnAbrir.setOnClickListener {
             startActivity(
                 Intent(this, SegundaActivity::class.java)
             )
             finish()
-        }*/
+        }
 
-/*        binding.btnParar.setOnClickListener {
+        binding.btnParar.setOnClickListener {
             //pararThread = true
             job?.cancel()
             binding.btnIniciar.text = "Reiniciar execução"
             binding.btnIniciar.isEnabled = true
-        }*/
+        }
 
         binding.btnIniciar.setOnClickListener {
 

@@ -11,6 +11,10 @@ interface PostagemAPI {
     @GET("posts")
     suspend fun recuperarPostagens(): Response<List<Postagem>>
 
+    @GET("photos")
+    suspend fun recuperarFotos(): Response<List<Foto>>
+
+
     @GET("posts/{id}")
     suspend fun recuperarPostagemUnica(
         @Path("id") id: Int
@@ -25,18 +29,6 @@ interface PostagemAPI {
     suspend fun recuperarComentariosParaPostagemQuery(
         @Query("postId") id: Int
     ): Response<List<Comentario>>
-
-    /*@GET("pesquisa/{marca}/{modelo}")//Path
-    suspend fun pesquisaPath(
-        @Path("marca") marca: String,
-        @Path("modelo") modelo: String,
-    ): Response<List<Comentario>>
-
-    @GET("pesquisa")//Query pesquisa?marca=&modelo=civic
-    suspend fun pesquisaQuery(
-        @Query("marca") marca: String,
-        @Query("modelo") modelo: String,
-    ): Response<List<Comentario>>*/
 
     @POST("posts")
     suspend fun salvarPostagem(
